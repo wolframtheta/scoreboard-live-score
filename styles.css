@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'digital';
+    src: url('fonts/DS-DIGI.TTF');
+}
+body {
+    background-color: #00ff00!important;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.scoreboard {
+    background-color: black;
+    width: 600px;
+    height: 40px;
+    color: white;
+    display: flex;
+    font-size: 1.5em;
+    justify-content: space-between;
+    border-radius:20px;
+}
+.match-time {
+    align-self: center;
+    text-align: center;
+    height: 40px;
+}
+.local-team {
+    align-self: center;
+    text-align: start;
+
+}
+.visitant-team {
+    align-self: center;
+    text-align: end;
+
+}
+.logo-crsv {
+    width: 15%;
+}
+.logo-visitant {
+    width: 20%;
+}
+.flags {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 5%;
+    
+}
+.league > span {
+    margin-left: 28%;
+}
+.tries-local {
+    text-align: center;
+}
+.tries-local > span, .tries-visitant > span, .league > span {
+    background-color: black;
+    padding: 5px;
+    font-size: 0.8em;
+    border-radius: 5px 5px 0px 0px;
+}
+.tries-local > span {
+    margin-left: 85%;
+    display: none;
+}
+.tries-visitant > span {
+    margin-left: -85%;
+    display: none;
+}
+.tries-visitant {
+    text-align: center;
+}
+.score {
+    vertical-align: middle;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 1%;
+    border: 2px green solid;
+    border-radius: 20px;
+    font-family: 'digital';
+    font-size: 1.2em;
+}
+
+#text-timer {
+    font-family: 'digital';
+    font-size: 1.6em;
+}
+
+.control-panel {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.out-time {
+    background-color: red;
+    color: white;
+}
+button {
+    /* height: 60px; */
+    font-size: 'Exo 2'!important;
+    font-size: 1.6em!important;
+    min-width: 50px;
+}
+.btn-small {
+    font-size: 1em!important;
+}
+
+.settings-local {
+    text-align: end;
+}
+.settings-visitant {
+    text-align: start;
+}
+
+input.small-number {
+    max-width: 40px;
+}

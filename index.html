@@ -1,0 +1,126 @@
+<html>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <body onload="loadPreferences()">
+        <div class="flags">
+
+            <div style="width: 600px">
+                <div class="col-sm-4 tries-local">
+                    <span id="local-tries">1</span>
+                </div>
+                <div class="col-sm-4 league">
+                    <span>DHC Vueling</span>
+                </div>
+                <div class="col-sm-4 tries-visitant">
+                    <span id="visitant-tries">2</span>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <div class="scoreboard row">
+                <div class="col-sm-5 local-team">
+                    <span>Cocodrils</span>
+                    <img src="crsv.png" class="logo-crsv"/>
+                    <span class="score" id="local-score">00</span>
+                </div>
+                <div class="col-sm-3 match-time" id="text-timer-father">
+                    <span id="text-timer">00:00</span>
+                    
+                </div>
+                <div class="col-sm-5 visitant-team">
+                    <span class="score" id="visitant-score">00</span>
+                    <img src="visitant.png" class="logo-visitant"/>
+                    Cervello
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid control-panel">
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <h1>Configuracio partit</h1>
+                    <div>
+                        <form>
+                            <span>Temps per part: </span><span id="text-time-per-part">40</span>m
+                            <input type="text" class="small-number" id="time-per-part"/>
+                            <button type="button" class="btn btn-small" onclick="editTimePart()">Editar</button>
+                        </form>
+                        <br>
+                        <div>
+                            <span>Numero de parts: </span><span id="text-number-of-parts">2</span>
+                            <input type="text"  class="small-number" id="number-of-parts"/>
+                            <button type="button" class="btn btn-small" onclick="editNumberOfParts()">Editar</button>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <button type="button" class="btn" onclick="startTime()">Start temps</button>
+                        <button type="button" class="btn" onclick="stopTime()">Stop temps</button>
+                        <button type="button" class="btn" onclick="resetTime()">Reset temps</button>
+                        <button type="button" class="btn" onclick="resetSeconds()">Reset segons</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn" onclick="addTime(1)">+1 min</button>
+                        <button type="button" class="btn" onclick="addTime(-1)">-1 min</button>
+                        <button type="button" class="btn" onclick="addTime(5)">+5 min</button>
+                        <button type="button" class="btn" onclick="addTime(-5)">-5 min</button>
+                        <button type="button" class="btn" onclick="addTime(10)">+10 min</button>
+                        <button type="button" class="btn" onclick="addTime(-10)">-10 min</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 settings-local">
+                    <h1>
+                        Local
+                    </h1>
+                    <div>
+                        <h2>Try</h2>
+                        <h4>+5 punts</h4>
+                        <button type="button" class="btn" onclick="addPoints('local', 5)">+</button>
+                        <button type="button" class="btn" onclick="removePoints('local', 5)">-</button>
+                    </div>
+                    <div>
+                        <h2>Transformacio</h2>
+                        <h4>+2 punts</h4>
+                        <button type="button" class="btn" onclick="addPoints('local', 2)">+</button>
+                        <button type="button" class="btn" onclick="removePoints('local', 2)">-</button>
+                    </div>
+                    <div>
+                        <h2>Penalty Kick</h2>
+                        <h4>+3 punts</h4>
+                        <button type="button" class="btn" onclick="addPoints('local', 3)">+</button>
+                        <button type="button" class="btn" onclick="removePoints('local', 3)">-</button>
+                    </div>
+                </div>
+                <div class="col-sm-6 settings-visitant">
+                    <h1>
+                        Visitant
+                    </h1>
+                    <div>
+                        <h2>Try</h2>
+                        <h4>+5 punts</h4>
+                        <button type="button" class="btn" onclick="addPoints('visitant', 5)">+</button>
+                        <button type="button" class="btn" onclick="removePoints('visitant', 5)">-</button>
+                    </div>
+                    <div>
+                        <h2>Transformacio</h2>
+                        <h4>+2 punts</h4>
+                        <button type="button" class="btn" onclick="addPoints('visitant', 2)">+</button>
+                        <button type="button" class="btn" onclick="removePoints('visitant', 2)">-</button>
+                    </div>
+                    <div>
+                        <h2>Penalty Kick</h2>
+                        <h4>+3 punts</h4>
+                        <button type="button" class="btn" onclick="addPoints('visitant', 3)">+</button>
+                        <button type="button" class="btn" onclick="removePoints('visitant', 3)">-</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

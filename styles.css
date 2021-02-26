@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'digital';
-    src: url('fonts/DS-DIGI.TTF');
+    src: url('fonts/DigitaldreamNarrow.ttf');
 }
 body {
     background-color: #00ff00!important;
@@ -70,20 +70,21 @@ body {
 }
 .score {
     vertical-align: middle;
-    padding-left: 2%;
-    padding-right: 2%;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 1%;
+    /* padding-left: 3%;
+    padding-right: 2%; */
+    padding: 3% 2% 3% 3%;
+    margin-left: 5px;
+    margin-right: 5px;
     border: 2px green solid;
     border-radius: 20px;
     font-family: 'digital';
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
 }
 
 #text-timer {
     font-family: 'digital';
-    font-size: 1.6em;
+    font-size: 1.4em;
+    line-height: 43px;
 }
 
 .control-panel {

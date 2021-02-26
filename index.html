@@ -27,7 +27,7 @@
                     <img src="crsv.png" class="logo-crsv"/>
                     <span class="score" id="local-score">00</span>
                 </div>
-                <div class="col-sm-3 match-time" id="text-timer-father">
+                <div class="col-sm-3 match-time align-middle" id="text-timer-father">
                     <span id="text-timer">00:00</span>
                     
                 </div>
@@ -49,23 +49,30 @@
                             <input type="text" class="small-number" id="time-per-part"/>
                             <button type="button" class="btn btn-small" onclick="editTimePart()">Editar</button>
                         </form>
-                        <br>
+                        <!-- <br>
                         <div>
                             <span>Numero de parts: </span><span id="text-number-of-parts">2</span>
                             <input type="text"  class="small-number" id="number-of-parts"/>
                             <button type="button" class="btn btn-small" onclick="editNumberOfParts()">Editar</button>
-                        </div>
+                        </div> -->
                     </div>
                     <br>
+                    <span id="text-actual-part">1</span> part
                     <div>
                         <button type="button" class="btn" onclick="startTime()">Start temps</button>
                         <button type="button" class="btn" onclick="stopTime()">Stop temps</button>
                         <button type="button" class="btn" onclick="resetTime()">Reset temps</button>
                         <button type="button" class="btn" onclick="resetSeconds()">Reset segons</button>
                     </div>
+                    <br>
                     <div>
+                        <button type="button" class="btn" onclick="addPart(1)">+1 part</button>
+                        <button type="button" class="btn" onclick="addPart(-1)">-1 part</button>
                         <button type="button" class="btn" onclick="addTime(1)">+1 min</button>
                         <button type="button" class="btn" onclick="addTime(-1)">-1 min</button>
+                    </div>
+                    <br>
+                    <div>
                         <button type="button" class="btn" onclick="addTime(5)">+5 min</button>
                         <button type="button" class="btn" onclick="addTime(-5)">-5 min</button>
                         <button type="button" class="btn" onclick="addTime(10)">+10 min</button>
@@ -78,6 +85,9 @@
                     <h1>
                         Local
                     </h1>
+                    <div>
+                        <button type="button" class="btn" onclick="resetPoints('local')">Reset punts</button>
+                    </div>
                     <div>
                         <h2>Try</h2>
                         <h4>+5 punts</h4>
@@ -101,6 +111,9 @@
                     <h1>
                         Visitant
                     </h1>
+                    <div>
+                        <button type="button" class="btn" onclick="resetPoints('visitant')">Reset punts</button>
+                    </div>
                     <div>
                         <h2>Try</h2>
                         <h4>+5 punts</h4>

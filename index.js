@@ -85,8 +85,8 @@ sec = 0;
 min = 0;
 function timerF() {
     this.sec++;
-    this.sec = this.sec%60;
     this.min += parseInt(this.sec/60, 10);
+    this.sec = this.sec%60;
     this.updateTimer();
     
 
@@ -113,8 +113,14 @@ function updateTimer() {
 function addTime(value) {
     const secToAdd = value*60;
     this.sec += secToAdd;
+    if (this.sec <= 0) {
+        this.sec = 0;
+    }
     this.sec = this.sec%60;
     this.min += parseInt(secToAdd/60, 10);
+    if (this.min <= 0) {
+        this.min = 0;
+    }
     this.updateTimer();
 }
 function resetSeconds() {
@@ -124,6 +130,9 @@ function resetSeconds() {
 
 function addPart(value) {
     this.actualPart += value;
+    if (this.actualPart <= 0) {
+        this.actualPart = 1;
+    }
     document.getElementById('text-actual-part').innerHTML = this.actualPart;
     this.updateTimer();
 }

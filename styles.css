@@ -3,8 +3,14 @@
     src: url('fonts/DigitaldreamNarrow.ttf');
 }
 body {
-    background-color: #00ff00!important;
+    
     font-family: 'Exo 2', sans-serif;
+}
+.scoreboard-content {
+    background-color: #FF00FF!important;
+    padding-bottom: 2%;
+    margin-top: -3%;
+    padding-top: 1px;
 }
 
 .scoreboard {
@@ -27,16 +33,21 @@ body {
     text-align: start;
 
 }
+.local-team > .name {
+    font-size: 1em;
+}
 .visitant-team {
     align-self: center;
     text-align: end;
-
+}
+.visitant-team > .name {
+    font-size: 19px;
 }
 .logo-crsv {
     width: 15%;
 }
 .logo-visitant {
-    width: 20%;
+    width: 17%;
 }
 .flags {
     display: flex;
@@ -90,6 +101,10 @@ body {
 .control-panel {
     margin-top: 20px;
     text-align: center;
+    color: black;
+}
+button {
+    color: black!important;
 }
 
 .out-time {
@@ -101,6 +116,8 @@ button {
     font-size: 'Exo 2'!important;
     font-size: 1.6em!important;
     min-width: 50px;
+    background-color: #0a9347;
+    color: white!important;
 }
 .btn-small {
     font-size: 1em!important;
@@ -108,9 +125,15 @@ button {
 
 .settings-local {
     text-align: end;
+    background-color: rgb(161, 255, 161);
+    padding: 1%;
+    margin-top: 1%;
 }
 .settings-visitant {
     text-align: start;
+    background-color: rgb(255, 189, 189);
+    padding: 1%;
+    margin-top: 1%;
 }
 
 input.small-number {
